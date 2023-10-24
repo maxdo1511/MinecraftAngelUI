@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Screen Name="Main">
+    <Elements>
+        <Grid>
+            <Elements>
+                <Button id="id" Size="50">
+                    <Title Color="255">
+                        Hello
+                    </Title>
+                    <Background Color="255" Alpha="0.2">
+                    </Background>
+                </Button>
+                <Button id="id 1" Size="50">
+                    <Title Color="255">
+                        Hello
+                    </Title>
+                    <Background Color="255" Alpha="0.2">
+                    </Background>
+                </Button>
+                <Button id="id 2" Size="50">
+                    <Title Color="255">
+                        Hello
+                    </Title>
+                    <Background Color="255" Alpha="0.2">
+                    </Background>
+                </Button>
+            </Elements>
+        </Grid>
+    </Elements>
+</Screen>
