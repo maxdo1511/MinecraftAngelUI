@@ -15,4 +15,22 @@ public class Grid extends Box {
     @XmlAttribute(name = "Rows")
     private int rows;
 
+    public Grid() {
+    }
+
+    public int getBorder() {
+        return border;
+    }
+
+    public int getOnClick() {
+        return onClick;
+    }
+
+    public int getColumns() {
+        return columns;
+    }
+
+    public int getRows() {
+        return rows;
+    }
 }

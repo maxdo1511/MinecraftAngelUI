@@ -1,4 +1,4 @@
-package ru.angelui.utils;
+package ru.angelui.utils.file;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

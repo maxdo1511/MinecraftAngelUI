@@ -11,4 +11,14 @@ public class HBox extends Box {
     @XmlAttribute(name = "onSectionClick")
     private int onClick;
 
+    public HBox() {
+    }
+
+    public int getBorder() {
+        return border;
+    }
+
+    public int getOnClick() {
+        return onClick;
+    }
 }

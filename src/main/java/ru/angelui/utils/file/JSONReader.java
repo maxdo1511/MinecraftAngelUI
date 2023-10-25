@@ -1,10 +1,11 @@
-package ru.angelui.utils;
+package ru.angelui.utils.file;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import ru.angelui.configs.MainJSONConfig;
 import ru.angelui.configs.ScreenJSONConfig;
+import ru.angelui.utils.file.enums.FileName;
 
 import java.util.List;
 import java.util.logging.Logger;

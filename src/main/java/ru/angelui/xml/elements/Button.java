@@ -13,4 +13,14 @@ public class Button extends GuiElement {
     @XmlAttribute(name = "onClick")
     private String click;
 
+    public Button() {
+    }
+
+    public TextAttribute getTitle() {
+        return title;
+    }
+
+    public String getClick() {
+        return click;
+    }
 }

@@ -1,12 +1,12 @@
-package ru.angelui.utils;
+package ru.angelui.factory.file;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.exc.MismatchedInputException;
+import ru.angelui.utils.file.enums.FileType;
+import ru.angelui.utils.file.JSONReader;
+import ru.angelui.utils.file.XMLReader;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.logging.Logger;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 public class FileFactory {
 
@@ -20,13 +20,13 @@ public class FileFactory {
     }
 
     public Object read(String path) {
-        try (InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(path)) {
+        try (BufferedReader bufferedReader = new BufferedReader(
+                new InputStreamReader(
+                        Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(path)), StandardCharsets.UTF_8
+                ))) {
             String string_data = "";
-            if (inputStream != null) {
-                int data;
-                while ((data = inputStream.read()) != -1) {
-                    string_data = string_data + ((char) data);
-                }
+            while (bufferedReader.ready()) {
+                string_data = string_data + bufferedReader.readLine();
             }
             FileType type = FileType.getFileType(path);
             switch (type) {

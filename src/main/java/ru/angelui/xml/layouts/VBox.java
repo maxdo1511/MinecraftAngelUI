@@ -11,4 +11,14 @@ public class VBox extends Box{
     @XmlAttribute(name = "onSectionClick")
     private int onClick;
 
+    public VBox() {
+    }
+
+    public int getBorder() {
+        return border;
+    }
+
+    public int getOnClick() {
+        return onClick;
+    }
 }

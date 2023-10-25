@@ -1,7 +1,7 @@
 package ru.angelui;
 
 import ru.angelui.configs.ScreenJSONConfig;
-import ru.angelui.utils.FileFactory;
+import ru.angelui.factory.file.FileFactory;
 import ru.angelui.xml.screens.Screen;
 
 import java.util.List;

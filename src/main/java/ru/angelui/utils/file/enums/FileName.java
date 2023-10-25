@@ -1,4 +1,4 @@
-package ru.angelui.utils;
+package ru.angelui.utils.file.enums;
 
 public enum FileName {
 

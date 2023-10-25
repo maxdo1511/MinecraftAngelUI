@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Screen Name="Main">
     <Elements>
-        <Grid>
+        <ScrollGrid>
+            <Scroller>
+                <VerticalScroller>
+
+                </VerticalScroller>
+            </Scroller>
             <Elements>
+                <TextField TextColor="RED" Text="Русский текст">
+                </TextField>
                 <Button id="id" Size="50">
                     <Title Color="255">
                         Hello
@@ -25,6 +32,6 @@
                     </Background>
                 </Button>
             </Elements>
-        </Grid>
+        </ScrollGrid>
     </Elements>
 </Screen>

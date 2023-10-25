@@ -3,6 +3,7 @@ package ru.angelui.xml.screens;
 import ru.angelui.interfaces.XMLModel;
 import ru.angelui.xml.elements.Button;
 import ru.angelui.xml.GuiElement;
+import ru.angelui.xml.elements.TextField;
 import ru.angelui.xml.layouts.*;
 
 import javax.xml.bind.annotation.*;
@@ -21,19 +22,20 @@ public class Screen extends GuiElement implements XMLModel {
             @XmlElement(name = "Grid", type = Grid.class),
             @XmlElement(name = "ScrollGrid", type = ScrollGrid.class),
             @XmlElement(name = "GuiElement", type = GuiElement.class),
-            @XmlElement(name = "Button", type = Button.class)
+            @XmlElement(name = "Button", type = Button.class),
+            @XmlElement(name = "TextField", type = TextField.class)
     })
     private List<GuiElement> Elements;
 
     public Screen() {
     }
 
-    @Override
-    public String getName() {
-        return super.getId();
+    public List<GuiElement> getElements() {
+        return Elements;
     }
 
-    public List getElements() {
-        return Elements;
+    @Override
+    public String getName() {
+        return getId();
     }
 }
