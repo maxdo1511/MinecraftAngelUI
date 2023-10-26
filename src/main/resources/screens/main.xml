@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Screen Name="Main">
+<?styles file="styles.css"?>
+<Screen id="Main">
     <Elements>
         <ScrollGrid>
             <Scroller>
@@ -8,7 +9,10 @@
                 </VerticalScroller>
             </Scroller>
             <Elements>
-                <TextField TextColor="RED" Text="Русский текст">
+                <TextField TextColor="RED">
+                    <Text Color="RED">
+                        Русский текст
+                    </Text>
                 </TextField>
                 <Button id="id" Size="50">
                     <Title Color="255">

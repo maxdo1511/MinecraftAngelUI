@@ -1,5 +1,6 @@
 package ru.angelui.factory.file;
 
+import ru.angelui.utils.file.CSSReader;
 import ru.angelui.utils.file.enums.FileType;
 import ru.angelui.utils.file.JSONReader;
 import ru.angelui.utils.file.XMLReader;
@@ -22,7 +23,7 @@ public class FileFactory {
     public Object read(String path) {
         try (BufferedReader bufferedReader = new BufferedReader(
                 new InputStreamReader(
-                        Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(path)), StandardCharsets.UTF_8
+                        Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(path)), encoding
                 ))) {
             String string_data = "";
             while (bufferedReader.ready()) {
@@ -34,6 +35,8 @@ public class FileFactory {
                     return JSONReader.readJSON(string_data, getFileName(path));
                 case XML:
                     return XMLReader.readXML(string_data);
+                case CSS:
+                    return CSSReader.readCSS(string_data);
             }
         }catch (Exception e) {
             e.printStackTrace();

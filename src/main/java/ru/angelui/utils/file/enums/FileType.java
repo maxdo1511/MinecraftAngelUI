@@ -6,6 +6,7 @@ public enum FileType {
 
     JSON,
     TXT,
+    CSS,
     XML;
 
     public static FileType getFileType(File file) {

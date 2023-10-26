@@ -2,12 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/ui/CustomGuiElement.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/utils/interpolator/InterpolationMode.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/utils/interpolator/MathInterpolation.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/utils/interpolator/MathInterpolationCore.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/ui/CustomGuiElement.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/utils/interpolator/InterpolationMode.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/utils/interpolator/MathInterpolationCore.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/xml/CustomGuiElement.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/xml/GuiElement.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/xml/GuiElement.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ru/angelui/xml/screens/Screen.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

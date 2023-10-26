@@ -1,4 +1,4 @@
-package ru.angelui.configs;
+package ru.angelui.utils.configs;
 
 public class ScreenJSONConfig {
 
