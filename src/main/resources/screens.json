@@ -1,6 +1,7 @@
 [
   {
     "start": false,
-    "path": "screens/main.xml"
+    "screen": "screens/main.xml",
+    "styles": "styles/styles.css"
   }
 ]

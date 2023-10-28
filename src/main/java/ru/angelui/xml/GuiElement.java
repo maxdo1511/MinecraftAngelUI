@@ -35,6 +35,10 @@ public abstract class GuiElement implements Cloneable {
     private int sizeX;
     @XmlAttribute(name = "SizeY")
     private int sizeY;
+    @XmlAttribute(name = "posX")
+    private int x;
+    @XmlAttribute(name = "posY")
+    private int y;
     @XmlElement(name = "Background", type = Background.class)
     private Background background;
     @XmlAttribute(name = "onOverlapped")
@@ -93,6 +97,22 @@ public abstract class GuiElement implements Cloneable {
 
     public String getWrap() {
         return wrap;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public String getOverlapped() {
+        return overlapped;
+    }
+
+    public String getOverlappedEnd() {
+        return overlappedEnd;
     }
 
     public int getSize() {

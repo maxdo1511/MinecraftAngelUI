@@ -27,11 +27,18 @@ public class Screen extends GuiElement implements XMLModel {
     })
     private List<GuiElement> Elements;
 
+    @XmlAttribute(name = "type")
+    private String type;
+
     public Screen() {
     }
 
     public List<GuiElement> getElements() {
         return Elements;
+    }
+
+    public String getType() {
+        return type;
     }
 
     @Override
