@@ -8,7 +8,7 @@
                 </VerticalScroller>
             </Scroller>
             <Elements>
-                <TextField TextColor="RED">
+                <TextField TextColor="RED" padding="50,50,30,10">
                     <Text Color="RED">
                         Русский текст
                     </Text>
@@ -17,7 +17,7 @@
                     <Title Color="255">
                         Hello
                     </Title>
-                    <Background Color="255" Alpha="0.2">
+                    <Background Color="255;0;0" Alpha="0.2">
                     </Background>
                 </Button>
                 <Button id="id 1" Size="50">

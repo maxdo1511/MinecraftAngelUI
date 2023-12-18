@@ -1,5 +1,6 @@
 package ru.angelui.builder.screen;
 
+import ru.angelui.ui.CustomGuiElement;
 import ru.angelui.ui.screens.CustomScreen;
 import ru.angelui.xml.GuiElement;
 
@@ -13,7 +14,5 @@ public interface IScreenBuilder {
     public IScreenBuilder applyAlignHorizontalAttribute(String horizontal);
     public IScreenBuilder applyAlignVerticalAttribute(String vertical);
     public IScreenBuilder applyDimensions(int windowX, int windowY, int x, int y, int sizeX, int sizeY);
-    public IScreenBuilder initChildren(Collection<GuiElement> children);
-    public CustomScreen build();
-
+    public CustomScreen build(Collection<GuiElement> children);
 }

@@ -3,53 +3,39 @@ package ru.angelui.ui;
 import ru.angelui.ui.enums.ObjectType;
 import ru.angelui.ui.utils.CustomBackground;
 
-public abstract class CustomGuiElement implements Cloneable {
+public abstract class CustomGuiElement extends BasicGuiElement implements Cloneable {
 
-    private String id;
-    private int x, y, sizeX, sizeY;
     private ObjectType type;
     private CustomBackground background;
 
     public CustomGuiElement() {
-
-
-
     }
 
-    public String getId() {
-        return id;
+    public CustomGuiElement(String id, int x, int y, int sizeX, int sizeY, ObjectType type, CustomBackground background) {
+        this.id = id;
+        this.x = x;
+        this.y = y;
+        this.sizeX = sizeX;
+        this.sizeY = sizeY;
+        this.type = type;
+        this.background = background;
     }
+
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public int getX() {
-        return x;
     }
 
     public void setX(int x) {
         this.x = x;
     }
 
-    public int getY() {
-        return y;
-    }
-
     public void setY(int y) {
         this.y = y;
     }
 
-    public int getSizeX() {
-        return sizeX;
-    }
-
     public void setSizeX(int sizeX) {
         this.sizeX = sizeX;
-    }
-
-    public int getSizeY() {
-        return sizeY;
     }
 
     public void setSizeY(int sizeY) {

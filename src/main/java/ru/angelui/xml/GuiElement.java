@@ -1,6 +1,7 @@
 package ru.angelui.xml;
 
 import ru.angelui.xml.elements.attributes.Background;
+import ru.angelui.xml.enums.ElementType;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType
 public abstract class GuiElement implements Cloneable {
 
+    private final ElementType elementType = ElementType.DEFAULT;
     @XmlAttribute(name = "id")
     private String id;
     @XmlAttribute(name = "Padding")
@@ -59,6 +61,9 @@ public abstract class GuiElement implements Cloneable {
         }
     }
 
+    public ElementType getElementType() {
+        return elementType;
+    }
     public String getId() {
         return id;
     }

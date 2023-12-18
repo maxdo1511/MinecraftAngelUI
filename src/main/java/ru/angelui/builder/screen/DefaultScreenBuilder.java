@@ -1,6 +1,7 @@
 package ru.angelui.builder.screen;
 
 import ru.angelui.factory.element.CustomGuiElementLocalizedFactory;
+import ru.angelui.ui.BasicGuiElement;
 import ru.angelui.ui.CustomGuiElement;
 import ru.angelui.ui.screens.CustomScreen;
 import ru.angelui.xml.GuiElement;
@@ -17,13 +18,10 @@ public class DefaultScreenBuilder implements IScreenBuilder {
     private String id;
     private int x, y, sizeX, sizeY;
     private Wrap wrap;
-    private Align align;
     private Align.Horizontal horizontal;
     private Align.Vertical vertical;
-    private Map<String, CustomGuiElement> elements;
 
     public DefaultScreenBuilder() {
-        elements = new HashMap<>();
     }
 
     @Override
@@ -114,29 +112,30 @@ public class DefaultScreenBuilder implements IScreenBuilder {
     }
 
     @Override
-    public IScreenBuilder initChildren(Collection<GuiElement> children) {
-        CustomGuiElementLocalizedFactory factory = new CustomGuiElementLocalizedFactory();
-        for (GuiElement element : children) {
-            CustomGuiElement customGuiElement = factory.createElement(element);
-            elements.put(customGuiElement.getId(), customGuiElement);
-        }
-        return this;
-    }
-
-    @Override
-    public CustomScreen build() {
+    public CustomScreen build(Collection<GuiElement> children) {
         CustomScreen customScreen = new CustomScreen(
                 id,
                 x,
                 y,
                 sizeX,
                 sizeY,
-                elements
+                null
         );
+        customScreen.setElements(initChildren(children, customScreen));
         if (customScreen.doQualityCheck()) {
             return customScreen;
         } else {
             throw new RuntimeException("Screen " + id + " error build!");
         }
+    }
+
+    private Map<String, CustomGuiElement> initChildren(Collection<GuiElement> children, BasicGuiElement parent) {
+        Map<String, CustomGuiElement> elements = new HashMap<>();
+        CustomGuiElementLocalizedFactory factory = new CustomGuiElementLocalizedFactory();
+        for (GuiElement element : children) {
+            CustomGuiElement customGuiElement = factory.createElement(element, parent);
+            elements.put(customGuiElement.getId(), customGuiElement);
+        }
+        return elements;
     }
 }

@@ -31,8 +31,7 @@ public class CustomScreenLocalizedFactory extends CustomScreenAbstractFactory {
                                     screen.getY(),
                                     screen.getSizeX(),
                                     screen.getSizeY()).
-                            initChildren(screen.getElements()).
-                            build();
+                            build(screen.getElements());
             }
         }catch (Exception e) {
             e.printStackTrace();
